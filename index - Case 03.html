@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 04 - Case 03</title>
+
+    <style>
+
+        body {
+            overflow: hidden;
+        }
+
+        div {
+            width: 250px;
+            height: 100px;
+            background-color: darkblue;
+            border-radius: 25px;
+
+            animation: my-animation 3s infinite alternate;
+        }
+
+        @keyframes my-animation {
+            0% {
+                margin-left: 0;
+                margin-top: 0;
+                background-color: darkblue;
+            }
+
+            25% {
+                margin-left: calc(100vw - 150px);
+                margin-top: 0;
+                background-color: yellow;
+                transform: rotate(180deg);
+            }
+
+            50% {
+                margin-left: calc(100vw - 150px);
+                margin-top: calc(100vh - 80px);
+                background-color: red;
+                transform: rotate(0deg);
+            }
+
+            75% {
+                margin-left: 0;
+                margin-top: calc(100vh - 80px);
+                background-color: green;
+                transform: rotate(-180deg);
+            }
+
+            /*100% {
+
+            }*/
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
