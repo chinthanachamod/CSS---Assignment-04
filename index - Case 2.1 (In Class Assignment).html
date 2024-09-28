@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> transition for rotate a circle border</title>
+
+    <style>
+
+        body {
+            background: darkblue;
+        }
+
+        /*.Outer_Circle {
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            !*animation: rotate 2s infinite linear;*!
+        }*/
+
+        .Inner_Circle {
+            width: 260px;
+            height: 260px;
+            aspect-ratio: 1/1;
+            inner-radius: 100%;
+            background: dimgrey;
+            border-radius: 100%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            /*animation: rotate 2s infinite linear;*/
+        }
+
+        .Inner_Circle>h1 {
+            width: max-content;
+            height: max-content;
+
+            color: black;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .Inner_Circle::before {          /*content start eka create krnn pluwn*/
+            content: "";
+            border: 10px solid white;
+            border-radius: 100%;
+            border-top-color: red;
+
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            /*transition-duration: 2s;*/            /*before eka athule danna ba...mokada meka thule thyna transition
+        reset wenawa...eka nisa meka ".Inner_Circle:hover::before" athule danawa*/
+        }
+
+        .Inner_Circle:hover::before {           /*inner-circle eka hover karaddi eka athule thiyena before ekata aythi content eka hover karanna*/
+            transform: rotate(360deg);
+            transition-duration: 2s;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--<div class="Outer_Circle">              Meken karanna ba...hover eka daddi eka mulu package ekatamay apply wenne
+    <div class="Inner_Circle">
+        <h1> RWAD </h1>
+    </div>
+</div>-->
+
+<div class="Inner_Circle">
+    <h1> RWAD </h1>
+</div>
+
+
+</body>
+</html>
